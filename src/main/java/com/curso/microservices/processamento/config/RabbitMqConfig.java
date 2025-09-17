@@ -10,8 +10,7 @@ public class RabbitMqConfig {
 
     @Value("${broker.queue.processamento.name}")
     private String queue;
-
-
+    
     @Bean
     public Queue queue(){
         return new Queue(queue, true);
